@@ -6,7 +6,7 @@ BINS=hello
 all: $(BINS)
 
 %: %.c
-	$(CC) $(CFLAGS) -o $@ $?
+	$(CC) $(CFLAGS) -o -lgpiod $@ $?
 
 clean:
 	$(RM) $(BINS)

@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
 		return 1;
 	}
 
-	line = gpiod_line_request_output(chip, 17);
+	line = gpiod_chip_get_line(chip, 17);
 	if (!line) {
 		fprintf(stderr, "Get line failed\n");
 		gpiod_chip_close(chip);

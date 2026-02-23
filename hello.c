@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
 		return 1;
 	}
 
-	line = gpiod_chip_get_line(chip, 17);
+	line = gpiod_chip_get_line(chip, 11);
 	if (!line) {
 		fprintf(stderr, "Get line failed\n");
 		gpiod_chip_close(chip);
@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
 		return 1;
 	}
 
-	printf("Blinking LED on GPIO 17... Press Ctrl+C to stop.\n");
+	printf("Blinking LED on GPIO 11... Press Ctrl+C to stop.\n");
 	while (1) {
 		gpiod_line_set_value(line, VOLTAGE_HIGH);
 		usleep(500000);
